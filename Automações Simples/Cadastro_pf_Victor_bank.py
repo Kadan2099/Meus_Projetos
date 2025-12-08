@@ -1,6 +1,7 @@
 import pyautogui
 import time
 from random import randint, choice
+import pyperclip
 
 def NomeCompleto():
     """
@@ -382,26 +383,35 @@ def Gera_CPF():
     return "01974526631"
 
 def Gera_CEP():
-    return "07929100"
+    CEP = str()
+    for c in range(5):
+        CEP += str(randint(0,9))
+    CEP += "-"
+    for d in range(3):
+        CEP += str(randint(0,9))
+    return CEP
+
+def Digitacao(Entrada, velociade_de_digitacao):
+    print(Entrada)
+    pyperclip.copy(Entrada)
+    pyautogui.hotkey("ctrl", "v")
+    pyautogui.press("enter")
+    # pyperclip.copy("\n")
+    # pyautogui.hotkey("ctrl", "v")
+    time.sleep(velociade_de_digitacao)
+
 def Cadastro_Victor_bank(repeticoes, tempo_de_troca_de_tela, velociade_de_digitacao):
     time.sleep(tempo_de_troca_de_tela)
-    def Digitacao(Entrada):
-        print(Entrada)
-        # for i in Entrada:
-        #     pyautogui.write(rf"{i}")
-        #     pyautogui.write(i)
-        #     time.sleep
-        pyautogui.write(Entrada + " ")
-        # pyautogui.write("\n")
     for i in range(repeticoes):
-        Digitacao(NomeCompleto())
-        Digitacao(Gera_CPF()) # Era para ser CPF randomico
-        Digitacao(NomedeRua())
-        Digitacao(NumerodaCasa())
-        Digitacao(NomedeCidade())
-        Digitacao(NomedoEstado())
-        Digitacao(Gera_CEP())  # Era para ser Cep randomico
-        pyautogui.write("\n")
+        Digitacao(NomeCompleto(),velociade_de_digitacao)
+        Digitacao(Gera_CPF(),velociade_de_digitacao) # Era para ser CPF randomico
+        Digitacao(NomedeRua(),velociade_de_digitacao)
+        Digitacao(NumerodaCasa(),velociade_de_digitacao)
+        Digitacao(NomedeCidade(),velociade_de_digitacao)
+        Digitacao(NomedoEstado(),velociade_de_digitacao)
+        Digitacao(Gera_CEP(),velociade_de_digitacao)
+        # pyautogui.press("enter")
+        time.sleep(1)
         print("*" * 100)
 
 Cadastro_Victor_bank(4, 5, 0.1)
