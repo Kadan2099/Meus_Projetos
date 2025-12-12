@@ -1,6 +1,7 @@
 import pyautogui
 import winsound
 import time
+import tkinter
 from random import randint, choice
 import pyperclip
 
@@ -381,7 +382,7 @@ def NomedoEstado(a=True):
         return choice(EstadosNomes)
 
 def Gera_CPF():
-    return "01974526631"
+    return "0000000000"
 
 def Gera_CEP():
     CEP = str()
