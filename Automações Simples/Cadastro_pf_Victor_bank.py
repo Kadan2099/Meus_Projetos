@@ -1,4 +1,5 @@
 import pyautogui
+import winsound
 import time
 from random import randint, choice
 import pyperclip
@@ -410,8 +411,11 @@ def Cadastro_Victor_bank(repeticoes, tempo_de_troca_de_tela, velociade_de_digita
         Digitacao(NomedeCidade(),velociade_de_digitacao)
         Digitacao(NomedoEstado(),velociade_de_digitacao)
         Digitacao(Gera_CEP(),velociade_de_digitacao)
-        # pyautogui.press("enter")
-        time.sleep(1)
-        print("*" * 100)
+        pyautogui.press("enter")
 
-Cadastro_Victor_bank(4, 5, 0.1)
+        winsound.Beep(400, 100)
+        print("*" * 100)
+    winsound.Beep(100, 700)
+
+
+Cadastro_Victor_bank(1, 5, 0.1)
