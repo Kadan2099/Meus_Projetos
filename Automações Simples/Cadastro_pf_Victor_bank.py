@@ -382,7 +382,10 @@ def NomedoEstado(a=True):
         return choice(EstadosNomes)
 
 def Gera_CPF():
-    return "0000000000"
+    with open("CPF", "r+") as file:
+        conteudo = file.read()
+        print(conteudo)
+    return "00000000000"
 
 def Gera_CEP():
     CEP = str()
@@ -419,4 +422,5 @@ def Cadastro_Victor_bank(repeticoes, tempo_de_troca_de_tela, velociade_de_digita
     winsound.Beep(100, 700)
 
 
-Cadastro_Victor_bank(1, 5, 0.1)
+# Cadastro_Victor_bank(3, 5, 0.1)
+print(Gera_CPF())
