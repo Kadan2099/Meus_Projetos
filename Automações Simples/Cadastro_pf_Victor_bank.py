@@ -7,8 +7,6 @@ import pyperclip
 
 def NomeCompleto():
     """
-
-
     Retorna uma grande variação de nomes de ordem de grandeza alta na casa de trilhões então não se preocupe com
     Variedade.
     Embora o paradoxo do aniversário diminua o sonho de não haver colisões,
@@ -382,7 +380,7 @@ def NomedoEstado(a=True):
         return choice(EstadosNomes)
 
 def Gera_CPF():
-    with open("CPF", "r+") as file:
+    with open("CPF", "w+") as file:
         conteudo = file.read()
         print(conteudo)
     return "00000000000"
