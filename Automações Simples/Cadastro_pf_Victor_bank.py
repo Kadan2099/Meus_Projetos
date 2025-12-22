@@ -5,6 +5,7 @@ import tkinter
 from random import randint, choice
 import pyperclip
 
+
 def NomeCompleto():
     """
     Retorna uma grande variação de nomes de ordem de grandeza alta na casa de trilhões então não se preocupe com
@@ -56,12 +57,12 @@ def NomeCompleto():
         "Barbosa", "Santos", "Vieira", "Azevedo", "Paz", "Vasconcelos", "Moraes", "Pereira", "Cavalcante", "Siqueira",
         "Tavares"
     ]
-    Probabilidade = randint(1,100)
+    Probabilidade = randint(1, 100)
     Tamanho = 0
     Partes = []
     # 5% Tem mais de 3 Nomes, 20% tem 3 Nomes, 25% tem 2 nomes, 50% tem 1 nome
     if 1 <= Probabilidade <= 5:
-        Tamanho = randint(4,7)
+        Tamanho = randint(4, 7)
     elif 6 <= Probabilidade <= 25:
         Tamanho = 3
     elif 26 <= Probabilidade <= 50:
@@ -104,6 +105,7 @@ def NomeCompleto():
         Nome = " ".join(Partes)
         return Nome
 
+
 def NomedeRua():
     """
     Categoria	                                Probabilidade
@@ -125,9 +127,9 @@ def NomedeRua():
         TipoLogradouro = ["Rua", "Avenida"]
     else:
         TipoLogradouro = ["Travessa", "Alameda", "Estrada", "Rodovia", "Viela",
-            "Largo", "Praça", "Caminho", "Beco", "Passeio", "Viaduto", "Marginal",
-            "Ladeira", "Ciclovia", "Parque", "Boulevard", "Corredor", "Esplanada"
-        ]
+                          "Largo", "Praça", "Caminho", "Beco", "Passeio", "Viaduto", "Marginal",
+                          "Ladeira", "Ciclovia", "Parque", "Boulevard", "Corredor", "Esplanada"
+                          ]
     if 1 <= Probabilidade <= 35:
         """
         Homenagens a Pessoas	                    35%
@@ -146,15 +148,15 @@ def NomedeRua():
                     "Dom", "Prof.", "Dr.", "Pe.", "General",
                     "Capitão", "Coronel", "Marechal", "Comendador"
                 ]
-                NomeHomenagem = [ "Getúlio Vargas", "Oswaldo Cruz", "Tiradentes", "Machado de Assis",
-                                  "Rui Barbosa", "Castro Alves", "Carlos Gomes",
-                                  "Heitor Villa-Lobos", "Carlos Drummond", "JK",
-                                  "Zumbi dos Palmares", "Pelé", "Ayrton Senna", "Nelson Mandela",
-                                  "Albert Einstein", "João Pessoa", "Santos Dumont",
-                                  "Barão de Mauá", "José do Patrocínio",
-                                  "Antonio Conselheiro", "Manoel Bandeira", "Gilberto Freyre", "Vital Brasil",
-                                  "Paulo Freire", "Mário de Andrade"
-                                  ]
+                NomeHomenagem = ["Getúlio Vargas", "Oswaldo Cruz", "Tiradentes", "Machado de Assis",
+                                 "Rui Barbosa", "Castro Alves", "Carlos Gomes",
+                                 "Heitor Villa-Lobos", "Carlos Drummond", "JK",
+                                 "Zumbi dos Palmares", "Pelé", "Ayrton Senna", "Nelson Mandela",
+                                 "Albert Einstein", "João Pessoa", "Santos Dumont",
+                                 "Barão de Mauá", "José do Patrocínio",
+                                 "Antonio Conselheiro", "Manoel Bandeira", "Gilberto Freyre", "Vital Brasil",
+                                 "Paulo Freire", "Mário de Andrade"
+                                 ]
                 Sufixo = [
                     "Filho", "Neto", "Júnior", "Sobrinho", "Segundo", "Terceiro"
                 ]
@@ -238,7 +240,7 @@ def NomedeRua():
                                   "Aloe Vera", "Bromélia", "Cacto", "Suculenta", "Espada-de-São-Jorge", "Jiboia",
                                   "Hera", "Costela-de-Adão", "Antúrio", "Lírio-da-Paz", "Begônia", "Cróton", "Hortelã",
                                   "Manjericão", "Alecrim", "Lavanda", "Tomilho", "Arruda", "Capim-limão", "Gergelim",
-                                  "Hibisco","Amor-Perfeito", "Calêndula", "Crisântemo", "Sálvia", "Erva-do-Gato",
+                                  "Hibisco", "Amor-Perfeito", "Calêndula", "Crisântemo", "Sálvia", "Erva-do-Gato",
                                   "Rúcula", "Alface", "Espinafre", "Orégano", "Pimenteira", "Alecrim-do-Campo",
                                   "Dente-de-Leão", "Guaraná", "Erva-Mate", "Carqueja", "Jasmim-Manga", "Ipoméia",
                                   "Rosa", "Violeta", "Jasmim", "Magnólia", "Orquídea", "Hortênsia",
@@ -268,11 +270,11 @@ def NomedeRua():
         """
         Objetos_Ocupacoes = [
             "da Pedra", "das Pedras", "da Colina", "das Colinas", "da Fonte", "das Fontes",
-            "do Sino", "dos Sinos","da Serra", "das Serras","do Lago", "dos Lagos","da Ponte", "das Pontes",
+            "do Sino", "dos Sinos", "da Serra", "das Serras", "do Lago", "dos Lagos", "da Ponte", "das Pontes",
             "do Moinho", "dos Moinhos", "da Torre", "das Torres", "do Castelo", "dos Castelos", "da Chave",
             "das Chaves", "do Martelo", "dos Martelos", "da Lança", "das Lanças", "da Forja", "das Forjas",
             "da Ferradura", "das Ferraduras", "da Âncora", "das Âncoras", "da Lamparina", "das Lamparinas",
-            "da Estrela", "das Estrelas", "da Concha", "das Conchas","dos Ferreiros", "dos Carpinteiros",
+            "da Estrela", "das Estrelas", "da Concha", "das Conchas", "dos Ferreiros", "dos Carpinteiros",
             "dos Padeiros", "dos Ceramistas", "dos Ourives", "dos Porteiros", "dos Agricultores", "dos Oleiros",
             "dos Tecelões", "dos Tanoeiros", "dos Ciclistas", "dos Navegadores", "dos Marinheiros",
             "dos Pescadores", "dos Guias", "dos Artistas", "dos Músicos", "dos Poetas", "dos Escribas", "dos Astrônomos"
@@ -315,18 +317,20 @@ def NomedeRua():
         Nome_da_rua = " ".join(Nome_da_rua)
         return Nome_da_rua
 
+
 def NumerodaCasa():
     Numero = []
-    Numero.append(str(randint(1,2200)))
-    Prob_Letra = randint(1,100)
+    Numero.append(str(randint(1, 2200)))
+    Prob_Letra = randint(1, 100)
     if Prob_Letra == 1:
-        Letras = ["C","D"]
+        Letras = ["C", "D"]
         Numero.append(choice(Letras))
     elif 2 <= Prob_Letra <= 10:
         Letras = ["A", "B"]
         Numero.append(choice(Letras))
     Numero = "".join(Numero)
     return Numero
+
 
 def NomedeCidade():
     """
@@ -357,6 +361,7 @@ def NomedeCidade():
     Nome = "".join(Nome)
     return Nome
 
+
 def NomedoEstado(a=True):
     if a == False:
         EstadosSiglas = [
@@ -379,46 +384,59 @@ def NomedoEstado(a=True):
         ]
         return choice(EstadosNomes)
 
+
 def Gera_CPF():
     with open("CPF", "w+") as file:
         conteudo = file.read()
         print(conteudo)
-    return "00000000000"
+    return "44433322211"
+
 
 def Gera_CEP():
     CEP = str()
     for c in range(5):
-        CEP += str(randint(0,9))
+        CEP += str(randint(0, 9))
     CEP += "-"
     for d in range(3):
-        CEP += str(randint(0,9))
+        CEP += str(randint(0, 9))
     return CEP
+
 
 def Digitacao(Entrada, velociade_de_digitacao):
     print(Entrada)
     pyperclip.copy(Entrada)
     pyautogui.hotkey("ctrl", "v")
+
     pyautogui.press("enter")
     # pyperclip.copy("\n")
     # pyautogui.hotkey("ctrl", "v")
     time.sleep(velociade_de_digitacao)
 
-def Cadastro_Victor_bank(repeticoes, tempo_de_troca_de_tela, velociade_de_digitacao):
-    time.sleep(tempo_de_troca_de_tela)
+
+def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
     for i in range(repeticoes):
-        Digitacao(NomeCompleto(),velociade_de_digitacao)
-        Digitacao(Gera_CPF(),velociade_de_digitacao) # Era para ser CPF randomico
-        Digitacao(NomedeRua(),velociade_de_digitacao)
-        Digitacao(NumerodaCasa(),velociade_de_digitacao)
-        Digitacao(NomedeCidade(),velociade_de_digitacao)
-        Digitacao(NomedoEstado(),velociade_de_digitacao)
-        Digitacao(Gera_CEP(),velociade_de_digitacao)
-        pyautogui.press("enter")
+        Functions_geratriz = [NomeCompleto(), Gera_CPF(), NomedeRua(),
+                              NumerodaCasa(), NomedeCidade(), NomedoEstado(),
+                              Gera_CEP()]
+        for c in range(7):
+            Digitacao(Functions_geratriz[c], velociade_de_digitacao)
 
         winsound.Beep(400, 100)
         print("*" * 100)
     winsound.Beep(100, 700)
 
 
-# Cadastro_Victor_bank(3, 5, 0.1)
-print(Gera_CPF())
+def Gera_lista_ramdom():
+    Lista = []
+    for c in range(7):
+        Lista.append(Functions_geratriz[c])
+    return Lista
+
+
+if __name__ == "__main__":
+    Quantidade = int(input("Digite quantos cadastros faremos:   "))
+    Time = int(input("Quanto tempo iremos esperar?:   "))
+    for c in range(Time):
+        print(f"Contagem {c+1}")
+        time.sleep(1)
+    Cadastro_Victor_bank(Quantidade,0.2)
