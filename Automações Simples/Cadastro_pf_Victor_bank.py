@@ -406,11 +406,13 @@ def Digitacao(Entrada, velociade_de_digitacao):
     print(Entrada)
     pyperclip.copy(Entrada)
     pyautogui.hotkey("ctrl", "v")
-
     pyautogui.press("enter")
     # pyperclip.copy("\n")
     # pyautogui.hotkey("ctrl", "v")
     time.sleep(velociade_de_digitacao)
+
+def Gera_Idade():
+    return str(randint(10,100))
 
 
 def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
@@ -421,7 +423,7 @@ def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
         for c in range(7):
             Digitacao(Functions_geratriz[c], velociade_de_digitacao)
 
-        winsound.Beep(400, 100)
+        winsound.Beep(700, 100)
         print("*" * 100)
     winsound.Beep(100, 700)
 
