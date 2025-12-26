@@ -334,7 +334,7 @@ def NumerodaCasa():
 
 def NomedeCidade():
     """
-        Precisamos criar uma estrutura melhor
+        Precisamos criar uma estrutura melhor além de uma simples lista
     """
     CidadesBrasileiras = [
         "São Paulo", "Rio de Janeiro", "Brasília", "Fortaleza", "Salvador",
@@ -386,6 +386,7 @@ def NomedoEstado(a=True):
 
 
 def Gera_CPF():
+    #CRIA LOGO O MODULO DE CPF SEU PREGUIÇOSO !!!
     with open("CPF", "w+") as file:
         conteudo = file.read()
         print(conteudo)
