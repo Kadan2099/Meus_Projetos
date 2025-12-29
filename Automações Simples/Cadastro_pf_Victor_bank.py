@@ -1,7 +1,6 @@
 import pyautogui
 import winsound
 import time
-import tkinter
 from random import randint, choice
 import pyperclip
 
@@ -387,10 +386,13 @@ def NomedoEstado(a=True):
 
 def Gera_CPF():
     #CRIA LOGO O MODULO DE CPF SEU PREGUIÇOSO !!!
+    CPF = str()
     with open("CPF", "w+") as file:
         conteudo = file.read()
         print(conteudo)
-    return "44433322211"
+    for c in range(11):
+        CPF += str(randint(0,9))
+    return CPF
 
 
 def Gera_CEP():
