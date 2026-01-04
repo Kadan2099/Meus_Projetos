@@ -316,6 +316,213 @@ def NomedeRua():
         Nome_da_rua = " ".join(Nome_da_rua)
         return Nome_da_rua
 
+def NomedoBairro():
+    """
+    Categoria	                                Probabilidade
+    Homenagens a Pessoas	                    35%
+    Geográficos	                                30%
+    Árvores/Plantas/Flores	                    15%
+    Animais	                                    5%
+    Objetos/Ocorrências / Ocupações	            5%
+    Temáticos (cores, minerais, elementos)	    5%
+    Conceituais	                                5%
+    Returns:
+    """
+    Probabilidade = randint(1, 100)
+    Nome_de_bairro = []
+    Probab_tipo = randint(1, 100)
+    Genero = choice(["Masculino", "Feminino"])
+    if 1 <= Probab_tipo <= 80:
+        TipodeConjunto = ["Bairro"]
+    else:
+        TipodeConjunto = ["Conjunto habitacional", "Condomínio"]
+    if 1 <= Probabilidade <= 35:
+        """
+        Homenagens a Pessoas	                    35%
+            Destes 75% são Homenagens a Pessoas
+            O restante de 25% é de Santos
+        """
+        Probabilidade = randint(1, 100)
+        if 1 <= Probabilidade <= 75:
+            """
+            Homenagens a Pessoas
+            """
+            Probabilidade = randint(1, 100)
+
+            if Genero == "Masculino":
+                Prefixo = [
+                    "Dom", "Prof.", "Dr.", "Pe.", "General",
+                    "Capitão", "Coronel", "Marechal", "Comendador"
+                ]
+                NomeHomenagem = ["Getúlio Vargas", "Oswaldo Cruz", "Tiradentes", "Machado de Assis",
+                                 "Rui Barbosa", "Castro Alves", "Carlos Gomes",
+                                 "Heitor Villa-Lobos", "Carlos Drummond", "JK",
+                                 "Zumbi dos Palmares", "Pelé", "Ayrton Senna", "Nelson Mandela",
+                                 "Albert Einstein", "João Pessoa", "Santos Dumont",
+                                 "Barão de Mauá", "José do Patrocínio",
+                                 "Antonio Conselheiro", "Manoel Bandeira", "Gilberto Freyre", "Vital Brasil",
+                                 "Paulo Freire", "Mário de Andrade"
+                                 ]
+                Sufixo = [
+                    "Filho", "Neto", "Júnior", "Sobrinho", "Segundo", "Terceiro"
+                ]
+                Nome_de_bairro.append(choice(TipodeConjunto))
+                Proprefix = randint(1, 100)
+                if 1 <= Proprefix <= 30:
+                    Nome_de_bairro.append(choice(Prefixo))
+                Nome_de_bairro.append(choice(NomeHomenagem))
+                Prosufix = randint(1, 100)
+                if 1 <= Prosufix <= 30:
+                    Nome_de_bairro.append(choice(Sufixo))
+                Nome_de_bairro = " ".join(Nome_de_bairro)
+                return Nome_de_bairro
+            elif Genero == "Feminino":
+                Prefixo = [
+                    "Dona", "Irmã", "Madre"
+                ]
+                NomeHomenagem = ["Chiquinha Gonzaga", "Clarice Lispector", "Maria Quitéria", "Anita Garibaldi",
+                                 "Dona Ivone Lara", "Zilda Arns", "Lélia Gonzalez", "Nise da Silveira",
+                                 "Malala Yousafzai", "Rosa Parks", "Frida Kahlo", "Carmen Miranda",
+                                 "Tarsila do Amaral", "Rachel de Queiroz", "Zuzu Angel",
+                                 "Beth Goulart", "Elis Regina", "Maria Bethânia", "Gal Costa", "Rita Lee"
+                                 ]
+                Nome_de_bairro.append(choice(TipodeConjunto))
+                Prosufix = randint(1, 100)
+                if 1 <= Prosufix <= 30:
+                    Nome_de_bairro.append(choice(Prefixo))
+                Nome_de_bairro.append(choice(NomeHomenagem))
+                Nome_de_bairro = " ".join(Nome_de_bairro)
+                return Nome_de_bairro
+        elif 76 <= Probabilidade <= 100:
+            """
+                Santos
+            """
+            if Genero == "Masculino":
+                PrefixoSantos = ["São", "Santo"]
+                NomesSantos = ["Pedro", "Paulo", "João", "Tiago", "Mateus", "Marcos", "Lucas", "José", "Bento",
+                               "Francisco", "Jorge", "Sebastião", "Cristóvão", "Lázaro", "Domingos", "Nicolau",
+                               "Caetano", "Roque", "Vicente", "Tomé", "Bartolomeu", "Filipe", "Simão", "Judas Tadeu",
+                               "Agostinho", "Jerônimo", "Martinho", "Gabriel", "Miguel", "Rafael", "Expedito",
+                               "Antônio", "Alberto", "Amaro", "Afonso", "Inácio", "André"]
+                Nome_de_bairro.append(choice(TipodeConjunto))
+                Nome_de_bairro.append(choice(PrefixoSantos))
+                Nome_de_bairro.append(choice(NomesSantos))
+                Nome_de_bairro = " ".join(Nome_de_bairro)
+                return Nome_de_bairro
+            elif Genero == "Feminino":
+                PrefixoSantos = [
+                    "Dona", "Irmã", "Madre", "Santa"
+                ]
+                NomesSantos = ["Maria", "Rita", "Luzia", "Teresa", "Catarina", "Cecília", "Helena", "Clara", "Ana",
+                               "Bárbara", "Bernadete", "Isabel", "Paulina", "Faustina", "Filomena", "Margarida",
+                               "Delfina", "Natália", "Edwiges", "Cristina", "Dolores", "Apolônia", "Verônica"
+                               ]
+                Nome_de_bairro.append(choice(TipodeConjunto))
+                Nome_de_bairro.append(choice(PrefixoSantos))
+                Nome_de_bairro.append(choice(NomesSantos))
+                Nome_de_bairro = " ".join(Nome_de_bairro)
+                return Nome_de_bairro
+    elif 36 <= Probabilidade <= 65:
+        """
+        Geográficos	                                30%
+        """
+        Geo = [
+            "Amazonas", "Pernambuco", "Pará", "Ceará", "Bahia", "Minas Gerais",
+            "Rio Branco", "Acre", "Ipanema", "Copacabana", "Leblon", "Botafogo",
+            "Mooca", "Ipiranga", "Bangu", "Cambuci", "Paraíba", "Xingu", "Solimões",
+            "Tocantins", "Amapá", "Guanabara", "Pinheiros", "Itapura", "Jabaquara",
+            "Santana", "Butantã", "Liberdade", "Perdizes"
+        ]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Geo))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+    elif 66 <= Probabilidade <= 80:
+        """
+        Árvores/Plantas/Flores	                    15%
+        """
+        Arvores_Plantas_Flores = ["Ipê", "Jequitibá", "Jacarandá", "Araucária", "Cedro", "Mogno",
+                                  "Angico", "Pau-Brasil", "Figueira", "Oitizeiro", "Sândalo", "Samambaia",
+                                  "Aloe Vera", "Bromélia", "Cacto", "Suculenta", "Espada-de-São-Jorge", "Jiboia",
+                                  "Hera", "Costela-de-Adão", "Antúrio", "Lírio-da-Paz", "Begônia", "Cróton", "Hortelã",
+                                  "Manjericão", "Alecrim", "Lavanda", "Tomilho", "Arruda", "Capim-limão", "Gergelim",
+                                  "Hibisco", "Amor-Perfeito", "Calêndula", "Crisântemo", "Sálvia", "Erva-do-Gato",
+                                  "Rúcula", "Alface", "Espinafre", "Orégano", "Pimenteira", "Alecrim-do-Campo",
+                                  "Dente-de-Leão", "Guaraná", "Erva-Mate", "Carqueja", "Jasmim-Manga", "Ipoméia",
+                                  "Rosa", "Violeta", "Jasmim", "Magnólia", "Orquídea", "Hortênsia",
+                                  "Azaleia", "Girassol", "Lótus", "Lavanda"]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Arvores_Plantas_Flores))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+    elif 81 <= Probabilidade <= 85:
+        """
+        Animais	                                    5%
+        """
+        Animais = [
+            "Andorinhas", "Araras", "Beija-Flores", "Borboletas", "Caititus", "Camaleões",
+            "Cavalos", "Corujas", "Gaviões", "Garças", "Gatos", "Gralhas", "Jacarés",
+            "Japins", "Jurus", "Lobos", "Lontras", "Macacos", "Onças", "Pardais",
+            "Pavões", "Pica-Paus", "Pombas", "Quatis", "Raposas", "Sabias", "Saracuras",
+            "Tamanduás", "Tartarugas", "Tucanos", "Urubus"
+        ]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Animais))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+    elif 86 <= Probabilidade <= 90:
+        """
+        Objetos/ Ocupações	            5%
+        """
+        Objetos_Ocupacoes = [
+            "da Pedra", "das Pedras", "da Colina", "das Colinas", "da Fonte", "das Fontes",
+            "do Sino", "dos Sinos", "da Serra", "das Serras", "do Lago", "dos Lagos", "da Ponte", "das Pontes",
+            "do Moinho", "dos Moinhos", "da Torre", "das Torres", "do Castelo", "dos Castelos", "da Chave",
+            "das Chaves", "do Martelo", "dos Martelos", "da Lança", "das Lanças", "da Forja", "das Forjas",
+            "da Ferradura", "das Ferraduras", "da Âncora", "das Âncoras", "da Lamparina", "das Lamparinas",
+            "da Estrela", "das Estrelas", "da Concha", "das Conchas", "dos Ferreiros", "dos Carpinteiros",
+            "dos Padeiros", "dos Ceramistas", "dos Ourives", "dos Porteiros", "dos Agricultores", "dos Oleiros",
+            "dos Tecelões", "dos Tanoeiros", "dos Ciclistas", "dos Navegadores", "dos Marinheiros",
+            "dos Pescadores", "dos Guias", "dos Artistas", "dos Músicos", "dos Poetas", "dos Escribas", "dos Astrônomos"
+        ]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Objetos_Ocupacoes))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+    elif 91 <= Probabilidade <= 95:
+        """
+        Temáticos (cores, minerais, elementos)	    5%
+        """
+        Tematicos = [
+            "Vermelho", "Azul", "Amarelo", "Verde", "Branco", "Preto",
+            "Cinza", "Violeta", "Laranja", "Rosa",
+            "Ouro", "Prata", "Bronze", "Cobre", "Granito", "Mármore",
+            "Ferro", "Aço", "Quartzo", "Cristal",
+            "Hidrogênio", "Hélio", "Carbono", "Oxigênio", "Nitrogênio"
+        ]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Tematicos))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+    elif 96 <= Probabilidade <= 100:
+        """
+        Conceituais	                                5%
+        """
+        Conceituais = [
+            "Paz", "Esperança", "União", "Igualdade", "Justiça", "Liberdade",
+            "Fraternidade", "Progresso", "Vitória", "Independência", "Renovação",
+            "Sabedoria", "Harmonia", "Fortaleza", "Coragem", "Gratidão",
+            "Caridade", "Benevolência", "Firmeza", "Amizade", "Lealdade",
+            "Tranquilidade", "Clareza", "Honra", "Glória", "Virtude",
+            "Concordia", "Bonança", "Prosperidade", "Dignidade",
+            "Esperança Nova", "Novo Amanhecer", "Alvorada", "Aurora",
+            "Horizonte", "Luz", "Brilho", "Estrela", "Sol", "Lua"
+        ]
+        Nome_de_bairro.append(choice(TipodeConjunto))
+        Nome_de_bairro.append(choice(Conceituais))
+        Nome_de_bairro = " ".join(Nome_de_bairro)
+        return Nome_de_bairro
+
 
 def NumerodaCasa():
     Numero = []
