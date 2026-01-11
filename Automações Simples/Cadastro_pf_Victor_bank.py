@@ -627,7 +627,7 @@ def Gera_Idade():
 
 def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
     for i in range(repeticoes):
-        Functions_geratriz = [NomeCompleto(), Gera_CPF(), NomedeRua(),
+        Functions_geratriz = [NomeCompleto(), Gera_CPF(), NomedeRua(),NomedoBairro(),
                               NumerodaCasa(), NomedeCidade(), NomedoEstado(),
                               Gera_CEP()]
         for c in range(7):
