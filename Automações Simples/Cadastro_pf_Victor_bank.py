@@ -592,14 +592,8 @@ def NomedoEstado(a=True):
 
 
 def Gera_CPF():
-    #CRIA LOGO O MODULO DE CPF SEU PREGUIÇOSO !!!
-    CPF = str()
-    with open("CPF", "w+") as file:
-        conteudo = file.read()
-        print(conteudo)
-    for c in range(11):
-        CPF += str(randint(0,9))
-    return CPF
+
+    return None
 
 
 def Gera_CEP():
