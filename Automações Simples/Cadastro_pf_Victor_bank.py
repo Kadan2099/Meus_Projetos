@@ -592,7 +592,7 @@ def NomedoEstado(a=True):
 
 
 def Gera_CPF():
-
+    
     return None
 
 
