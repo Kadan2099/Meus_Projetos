@@ -99,7 +99,7 @@ def Gera_cpf(Gera_novo=False):
     """
     Gera_novo define se o gerador irá reiniciar no primeiro cpf válido existente.
 
-    O algoritmo valida apenas a consistência matemática do CPF caso o parametro realista seja liga.
+    O algoritmo valida apenas a consistência matemática do CPF caso o parametro realista seja ligado.
     A existência real do número no nosso mundo depende exclusivamente da base da Receita Federal.
     Quero deixar claro que o cpf pode existir e coincidir com alguma pessoa real, por se tratar de uma validação
     matemática que coincide com a realidade, este dentre todos os geradores é o mais particularmente sensível então tome
