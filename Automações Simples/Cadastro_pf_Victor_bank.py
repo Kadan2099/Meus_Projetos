@@ -1,9 +1,6 @@
-import pyautogui
-import winsound
-import time
+import pyautogui, winsound, time, pyperclip
 from random import randint, choice
-import pyperclip
-
+from CPF import *
 
 def NomeCompleto():
     """
@@ -17,7 +14,6 @@ def NomeCompleto():
     50%	~                       4,4 milhões
     75%	~                       6,2 milhões
     100% (praticamente certa)	18 milhões
-
     """
     PrimeiroNome = ['Ana', 'Bruno', 'Carlos', 'Daniela', 'Eduardo', 'Fernanda', 'Gabriel', 'Helena', 'Igor', 'Juliana',
                     'Karina', 'Lucas', 'Mariana', 'Nicolas', 'Olívia', 'Paulo', 'Quésia', 'Rafael', 'Sofia', 'Thiago',
@@ -591,9 +587,14 @@ def NomedoEstado(a=True):
         return choice(EstadosNomes)
 
 
-def Gera_CPF():
-    
-    return None
+def Gera_CPF(Realista=True):
+    if Realista:
+        Cpf = Gera_cpf_realista(Gera_novo=False)
+    else:
+        Cpf = str()
+        for c in range(11):
+            Cpf += str(randint(0, 9))
+    return Cpf
 
 
 def Gera_CEP():
@@ -621,8 +622,13 @@ def Gera_Idade():
 
 def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
     for i in range(repeticoes):
-        Functions_geratriz = [NomeCompleto(), Gera_CPF(), NomedeRua(),NomedoBairro(),
-                              NumerodaCasa(), NomedeCidade(), NomedoEstado(),
+        Functions_geratriz = [NomeCompleto(),
+                              Gera_CPF(),
+                              NomedeRua(),
+                              NomedoBairro(),
+                              NumerodaCasa(),
+                              NomedeCidade(),
+                              NomedoEstado(),
                               Gera_CEP()]
         for c in range(7):
             Digitacao(Functions_geratriz[c], velociade_de_digitacao)
