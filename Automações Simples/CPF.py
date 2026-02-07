@@ -121,9 +121,6 @@ def Gera_cpf_realista(Gera_novo=False):
                 conteudo = file.read()
 
             CPF_VALIDO = conteudo
-
-
-
             #icrementa para o próximo número e converte para um cpf válido
             conteudo = Gera_proximo_numero(conteudo)
             conteudo = Converge_a_Verdadeiro_Cpf(conteudo)
