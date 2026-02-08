@@ -630,7 +630,7 @@ def Cadastro_Victor_bank(repeticoes, velociade_de_digitacao):
                               NomedeCidade(),
                               NomedoEstado(),
                               Gera_CEP()]
-        for c in range(7):
+        for c in range(8):
             Digitacao(Functions_geratriz[c], velociade_de_digitacao)
 
         winsound.Beep(700, 100)
